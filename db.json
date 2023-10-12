@@ -1,0 +1,35 @@
+{
+    "seasons": [
+      {
+        "id": 1,
+        "description": "Rise of the Arachnid Hero",
+        "episodes": 10,
+        "premiereDate": "2023-01-15",
+        "endDate": "2023-03-30",
+        "likes": 0,
+        "starRatings": [],
+        "comments": []
+      },
+      {
+        "id": 2,
+        "description": "Web of Intrigue",
+        "episodes": 10,
+        "premiereDate": "2023-04-15",
+        "endDate": "2023-06-30",
+        "likes": 0,
+        "starRatings": [],
+        "comments": []
+      },
+      {
+        "id": 3,
+        "description": "Ultimate Showdown",
+        "episodes": 10,
+        "premiereDate": "2023-07-15",
+        "endDate": "2023-09-30",
+        "likes": 0,
+        "starRatings": [],
+        "comments": []
+      }
+    ]
+  }
+  
