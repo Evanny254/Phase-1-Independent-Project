@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         seasonInfoDiv.addEventListener('submit', event => {
+             // Handle comment submission on form submit.
             if (event.target.classList.contains('comment-form')) {
                 submitComment(event);
             }
@@ -82,19 +83,20 @@ function displaySeasonInfo(data) {
 
         // Add the description paragraph.
         seasonElement.innerHTML += `<p>${seasonDescriptions[index]}</p>`;
-        // Add the rest of the season information.
+        // Add the rest of the season information.(Information that would have otherwise been in an html file)
         seasonElement.innerHTML += `
         <p>Episodes: ${season.episodes}</p>
         <p>Premiere Date: ${season.premiereDate}</p>
         <p>End Date: ${season.endDate}</p>
-        <p>Comments:</p>
+        <p class="comments-heading">Comments:</p>
         <ul id="comments-${index + 1}"></ul>
         <form class="comment-form">
-        <textarea name="comment" placeholder="Type your comment here"></textarea>
+        <textarea name="comment" placeholder="Leave a comment"></textarea>
         <button type="submit">Submit</button>
         </form>
-        <p>Likes: <span id="likes-${index}" data-likes="${season.likes}">${season.likes}</span> <button class="like-button">♡</button></p>
-        <p>Rating: 
+        <p class="likes">Likes: <span id="likes-${index}" data-likes="${season.likes}">${season.likes}</span> <button class="like-button">♡</button></p>
+        <p> <p class="rating">
+        Rating: 
     <button class="star" data-rating="1">☆</button>
     <button class="star" data-rating="2">☆</button>
     <button class="star" data-rating="3">☆</button>
@@ -153,6 +155,7 @@ function updateStarRating(event) {
         parentDiv.setAttribute('data-selected-rating', rating);
     }
 }
+// Function to submit star rating for a season.
 function submitStarRating(event) {
     const parentDiv = event.target.closest('.season-element');
     if (parentDiv) {
