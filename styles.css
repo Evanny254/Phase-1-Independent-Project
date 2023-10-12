@@ -1,0 +1,126 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Georgia, serif;
+  background-image: url('images/Spiderman1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.season-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 15px;
+  cursor: pointer;
+}
+.like-button {
+  cursor: pointer;
+}
+
+.star.selected,
+.like-button.clicked {
+  color: red;
+}
+
+.star.clicked {
+  color: red; 
+}
+
+.season-icon {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  animation: scaleHover 1s alternate infinite;
+  transform-origin: center;
+}
+/* @keyframes scaleHover {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+} */
+
+.season-1-icon,
+.season-2-icon,
+.season-3-icon {
+  width: 300px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.comment-form textarea {
+  display: inline-block; 
+  vertical-align: top; 
+  font-family: Georgia;
+}
+
+.comment-form button[type="submit"] {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.comment-form button[type="submit"]:hover {
+  background-color: darkblue;
+}
+.submit-star-rating {
+  background-color: purple;
+  color: white;
+  font-size: 12px; 
+  padding: 5px 10px; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-star-rating:hover {
+  background-color: darkpink; 
+}
+.comment-item {
+  font-style: italic; 
+  color: #ff5733; 
+}
