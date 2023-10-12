@@ -7,9 +7,9 @@ body {
   font-family: Georgia, serif;
   background-position: center;
   background-size: cover;
-  color: black;
   animation: changeBackground 8s infinite;
 }
+
 @keyframes changeBackground {
   0%, 25% { background-image: url('images/Spiderman4.jpg'); }
   25%, 50% { background-image: url('images/Spiderman5.jpg'); }
@@ -17,11 +17,26 @@ body {
   75%, 100% { background-image: url('images/Spiderman7.jpg'); }
 }
 
+h1 {
+  text-align: center;
+  font-weight: bolder;
+  margin: 20px 0;
+  animation: colorChange 4s linear infinite;
+}
+
+@keyframes colorChange {
+  0% { color: purple; }
+  25% { color: red; }
+  50% { color: green; }
+  75% { color: orange; }
+  100% { color: blue; }
+}
+
 .container {
   max-width: 800px;
   margin: 10px auto;
   padding: 10px;
-  background-color:lightgray;
+  background-color: gold;
   border-radius: 10px;
 }
 
@@ -30,8 +45,9 @@ body {
   margin: 0 auto 20px;
   padding: 10px 20px;
   font-size: 1em;
-  color: #fff;
-  background-color: #007BFF;
+  color: whitesmoke;
+  background-color: green;
+  font-style: oblique;
   border: none;
   cursor: pointer;
   text-align: center;
@@ -39,35 +55,24 @@ body {
   border-radius: 4px;
 }
 
-.btn:hover {
-  background-color: #0056b3;
-}
-
 .season-card {
-  border: 1px solid silver;
+  border: 1px solid white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
-.star {
+.star, .like-button {
   font-size: 15px;
   cursor: pointer;
 }
-.like-button {
-  cursor: pointer;
-}
 
-.star.selected,
-.like-button.clicked {
+.star.selected, .like-button.clicked, .star.clicked {
   color: red;
+  background-color: aquamarine;
 }
 
-.star.clicked {
-  color: red; 
-}
-
-.season-icon {
+.season-icon, .season-1-icon, .season-2-icon, .season-3-icon {
   width: 100%;
   height: auto;
   display: block;
@@ -75,19 +80,14 @@ body {
   padding-bottom: 10px;
 }
 
-
-.season-1-icon,
-.season-2-icon,
-.season-3-icon {
+.season-1-icon, .season-2-icon, .season-3-icon {
   width: 300px;
   height: 250px;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 10px;
 }
+
 .comment-form textarea {
-  display: inline-block; 
-  vertical-align: top; 
+  display: inline-block;
+  vertical-align: top;
   font-family: Georgia;
 }
 
@@ -103,20 +103,43 @@ body {
 .comment-form button[type="submit"]:hover {
   background-color: darkblue;
 }
+
 .submit-star-rating {
   background-color: purple;
   color: white;
-  font-size: 12px; 
-  padding: 5px 10px; 
+  font-size: 12px;
+  padding: 5px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.submit-star-rating:hover {
-  background-color: darkpink; 
-}
 .comment-item {
-  font-style: italic; 
-  color: #ff5733; 
+  font-style: italic;
+  color: #ff5733;
+}
+
+.season-element h3 {
+  color: cadetblue;
+}
+
+.season-element p:nth-child(2) {
+  color: green;
+}
+
+.season-element p:nth-child(3),
+.season-element p:nth-child(4),
+.season-element p:nth-child(5) {
+  color: darkorchid;
+}
+
+.season-element p.comments-heading,
+.season-element p.likes,
+.season-element p.rating {
+  color: red;
+}
+
+.season-element .comment-form textarea::placeholder {
+  color: blue;
+  font-size: 1em;
 }
