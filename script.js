@@ -162,8 +162,8 @@ function submitStarRating(event) {
         const starRating = parseInt(parentDiv.getAttribute('data-selected-rating'));
         const seasonIndex = parseInt(parentDiv.id.split('-')[1], 10) - 1;
 
-        console.log('Star Rating Submitted:', starRating);
-        console.log('Season Index:', seasonIndex);
+        // console.log('Star Rating Submitted:', starRating);
+        // console.log('Season Index:', seasonIndex);
     }
 }
 
@@ -213,8 +213,8 @@ function submitComment(event) {
          commentTextArea.value = '';
         
         // Log or send the comment text and star rating for submission.
-        console.log('Comment:', commentText);
-        console.log('Season Index:', seasonIndex);
+        // console.log('Comment:', commentText);
+        // console.log('Season Index:', seasonIndex);
 
         
     } else {
