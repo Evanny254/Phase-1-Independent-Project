@@ -5,18 +5,23 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: Georgia, serif;
-  background-image: url('images/Spiderman1.jpg');
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   color: black;
+  animation: changeBackground 8s infinite;
+}
+@keyframes changeBackground {
+  0%, 25% { background-image: url('images/Spiderman4.jpg'); }
+  25%, 50% { background-image: url('images/Spiderman5.jpg'); }
+  50%, 75% { background-image: url('images/Spiderman6.jpg'); }
+  75%, 100% { background-image: url('images/Spiderman7.jpg'); }
 }
 
 .container {
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: lightgrey;
+  margin: 10px auto;
+  padding: 10px;
+  background-color:lightgray;
   border-radius: 10px;
 }
 
@@ -39,7 +44,7 @@ body {
 }
 
 .season-card {
-  border: 1px solid #ccc;
+  border: 1px solid silver;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -68,17 +73,8 @@ body {
   display: block;
   margin: 0 auto;
   padding-bottom: 10px;
-  animation: scaleHover 1s alternate infinite;
-  transform-origin: center;
 }
-/* @keyframes scaleHover {
-  0% {
-      transform: scale(1);
-  }
-  100% {
-      transform: scale(1.1);
-  }
-} */
+
 
 .season-1-icon,
 .season-2-icon,
